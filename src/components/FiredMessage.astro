@@ -1,0 +1,134 @@
+---
+import { getRandomReason } from '../scripts/messages.js';
+
+// Get initial random reason
+const initialReason = getRandomReason();
+---
+
+<div class="fired-container">
+  <div class="message-container">
+    <h2 class="header-text">YOU ARE FIRED BECAUSE...</h2>
+    <h1 id="firing-reason" class="firing-reason">{initialReason}</h1>
+    <p class="instruction">Press space or click anywhere to find out why else you're fired</p>
+  </div>
+
+  <footer class="footer">
+    <p class="footer-message">This site was entirely vibe coded in one hour :D</p>
+    <a href="https://github.com/yorjaggy/urfired.lol" target="_blank" rel="noopener noreferrer">
+      GitHub
+    </a>
+  </footer>
+</div>
+
+<script>
+  import { initializeInteractivity } from '../scripts/interactivity.js';
+
+  // Initialize interactivity when the DOM is loaded
+  document.addEventListener('DOMContentLoaded', initializeInteractivity);
+</script>
+
+<style>
+  .fired-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 16px;
+    background-color: #FF5722; /* Burnt orange */
+  }
+
+  .message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    max-width: 800px;
+    padding: 0 16px;
+  }
+
+  .header-text {
+    font-family: var(--font-mono);
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+
+  .firing-reason {
+    font-family: var(--font-sans);
+    color: black;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 32px 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .instruction {
+    font-family: var(--font-mono);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.875rem;
+    margin-top: 24px;
+    letter-spacing: 0.05em;
+  }
+
+  .footer {
+    width: 100%;
+    text-align: center;
+    padding: 16px 0;
+    margin-top: 16px;
+  }
+
+  .footer-message {
+    font-family: var(--font-mono);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+  }
+
+  .footer a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  /* Animation classes */
+  .fade-out {
+    opacity: 0;
+  }
+
+  .fade-in {
+    opacity: 1;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .firing-reason {
+      font-size: 2rem;
+    }
+
+    .header-text {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .firing-reason {
+      font-size: 4rem;
+    }
+
+    .header-text {
+      font-size: 1.5rem;
+    }
+  }
+</style>
