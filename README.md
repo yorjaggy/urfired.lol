@@ -1,5 +1,11 @@
 # urfired.lol - Why are you fired?
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Astro](https://img.shields.io/badge/Astro-3.0-7F5AF0?logo=astro)](https://astro.build)
+[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare-Pages-F38020?logo=cloudflare&logoColor=white)](https://pages.cloudflare.com)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/yourusername/urfired.lol/graphs/commit-activity)
+
 ![urfired.lol preview](/public/urfired.lol.png)
 
 A fun web application that generates random, humorous reasons why you might be fired. Built with Astro for a fast, modern web experience.
