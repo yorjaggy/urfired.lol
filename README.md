@@ -1,38 +1,58 @@
-# Astro Starter Kit: Basics
+# urfired.lol - Why are you fired?
 
-```sh
-npm create astro@latest -- --template basics
-```
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Astro](https://img.shields.io/badge/Astro-3.0-7F5AF0?logo=astro)](https://astro.build)
+[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare-Pages-F38020?logo=cloudflare&logoColor=white)](https://pages.cloudflare.com)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/yourusername/urfired.lol/graphs/commit-activity)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+![urfired.lol preview](/public/urfired.lol.png)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+A fun web application that generates random, humorous reasons why you might be fired. Built with Astro for a fast, modern web experience.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🎯 Features
+
+- Random firing reason generator
+- Interactive UI with space/click events
+- Personalized messages with URL parameters
+- Smooth animations and transitions
+- Responsive design
+- Modern typography with Inter and IBM Plex Mono fonts
+
+## 🔗 URL Parameters
+
+You can personalize the experience using URL parameters:
+
+- `n`: Name parameter (max 10 characters)
+  - Example: `?n=John`
+- `c`: Company parameter (max 10 characters)
+  - Example: `?c=Google`
+- Combined: `?n=John&c=Google`
 
 ## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
 ├── public/
-│   └── favicon.svg
+│   ├── favicon.svg
+│   ├── interactivity.js    # Client-side interactivity
+│   └── messages.js         # Firing reasons collection
 ├── src/
+│   ├── components/
+│   │   └── FiredMessage.astro  # Main component
 │   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   │   └── Layout.astro        # Base layout
+│   ├── pages/
+│   │   └── index.astro         # Main page
+│   └── scripts/
+│       ├── interactivity.js    # Server-side interactivity
+│       └── messages.js         # Server-side messages
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🛠️ Development
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
+All commands are run from the root of the project:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
@@ -40,9 +60,23 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 🎨 Design
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Colors**: Burnt orange (#FF5722) background with black and white text
+- **Fonts**:
+  - Inter for main text
+  - IBM Plex Mono for UI elements
+- **Animations**: Smooth fade transitions for message updates
+
+## 🤝 Contributing
+
+Feel free to contribute to this project by:
+1. Forking the repository
+2. Creating a new branch
+3. Making your changes
+4. Submitting a pull request
+
+## 📝 License
+
+This project is open source and available under the MIT License.

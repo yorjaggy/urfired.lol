@@ -1,5 +1,14 @@
 ---
-import { getRandomReason } from '../scripts/messages.js';
+import { getRandomReason } from '../script/messages.js';
+
+// Get URL parameters from the request URL
+const url = new URL(Astro.request.url);
+
+const rawName = url.searchParams.get('n') || '';
+const rawCompany = url.searchParams.get('c') || '';
+
+const name = rawName.length <= 10 ? rawName.toUpperCase() : '';
+const company = rawCompany.length <= 10 ? rawCompany.toUpperCase() : '';
 
 // Get initial random reason
 const initialReason = getRandomReason();
@@ -7,9 +16,13 @@ const initialReason = getRandomReason();
 
 <div class="fired-container">
   <div class="message-container">
-    <h2 class="header-text">YOU ARE FIRED BECAUSE...</h2>
-    <h1 id="firing-reason" class="firing-reason">{initialReason}</h1>
-    <p class="instruction">Press space or click anywhere to find out why else you're fired</p>
+    <h2 class="header-text">
+      {name ? `${name} YOU ARE FIRED BECAUSE...` : 'YOU ARE FIRED BECAUSE...'}
+    </h2>
+    <h1 id="firing-reason" class="firing-reason">
+      {company ? `${company} THINKS ${initialReason}` : initialReason}
+    </h1>
+    <p class="instruction">Press space or click anywhere to find out why you're fired</p>
   </div>
 
   <footer class="footer">
@@ -20,11 +33,13 @@ const initialReason = getRandomReason();
   </footer>
 </div>
 
-<script>
-  import { initializeInteractivity } from '../scripts/interactivity.js';
+<script type="module" define:vars={{ name, company }}>
+  import { initializeInteractivity } from '/interactivity.js';
 
-  // Initialize interactivity when the DOM is loaded
-  document.addEventListener('DOMContentLoaded', initializeInteractivity);
+  // Make sure the DOM is fully loaded
+  window.addEventListener('load', () => {
+    initializeInteractivity(name, company);
+  });
 </script>
 
 <style>

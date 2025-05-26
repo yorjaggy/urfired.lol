@@ -6,7 +6,7 @@ let currentReason = getRandomReason();
 /**
  * Update the displayed message with a random reason
  */
-function updateMessage() {
+function updateMessage(name, company) {
   const messageElement = document.getElementById('firing-reason');
 
   // Add the fade-out class
@@ -15,7 +15,7 @@ function updateMessage() {
   // After the fade-out animation completes, update the text and fade back in
   setTimeout(() => {
     currentReason = getRandomReason();
-    messageElement.textContent = currentReason;
+    messageElement.textContent = company ? `${company} THINKS ${currentReason}` : currentReason;
     messageElement.classList.remove('fade-out');
     messageElement.classList.add('fade-in');
 
@@ -29,20 +29,21 @@ function updateMessage() {
 /**
  * Initialize event listeners
  */
-export function initializeInteractivity() {
+export function initializeInteractivity(name, company) {
   // Set initial reason
-  document.getElementById('firing-reason').textContent = currentReason;
+  const messageElement = document.getElementById('firing-reason');
+  messageElement.textContent = company ? `${company} THINKS ${currentReason}` : currentReason;
 
   // Listen for spacebar press
   document.addEventListener('keydown', (event) => {
     if (event.code === 'Space' || event.key === ' ') {
       event.preventDefault(); // Prevent page scrolling on spacebar
-      updateMessage();
+      updateMessage(name, company);
     }
   });
 
   // Listen for clicks anywhere on the page
   document.addEventListener('click', () => {
-    updateMessage();
+    updateMessage(name, company);
   });
-}
+} 
