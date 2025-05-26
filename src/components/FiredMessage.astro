@@ -4,13 +4,11 @@ import { getRandomReason } from '../script/messages.js';
 // Get URL parameters from the request URL
 const url = new URL(Astro.request.url);
 
-console.log(url);
-
 const rawName = url.searchParams.get('n') || '';
 const rawCompany = url.searchParams.get('c') || '';
 
 const name = rawName.length <= 10 ? rawName.toUpperCase() : '';
-const company = rawCompany.length <= 10 ? rawCompany : '';
+const company = rawCompany.length <= 10 ? rawCompany.toUpperCase() : '';
 
 // Get initial random reason
 const initialReason = getRandomReason();
