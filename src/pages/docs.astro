@@ -1,0 +1,377 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Documentation - urfired.lol"
+  description="Learn how to use the urfired.lol API to generate personalized firing messages."
+>
+  <div class="docs-container">
+    <div class="docs-content">
+      <header class="docs-header">
+        <h1>Documentation</h1>
+        <p class="subtitle">Learn how to use urfired.lol to spread the joy of getting fired</p>
+      </header>
+
+      <section class="section">
+        <h2>What is urfired.lol?</h2>
+        <p>
+          urfired.lol is a humorous web application that generates random, satirical reasons 
+          why someone might be fired. Perfect for sharing with friends, pranking coworkers, 
+          or just having a laugh during tough times.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>How to Use</h2>
+        <p>
+          Simply visit the homepage and press <strong>space</strong> or <strong>click anywhere</strong> 
+          to generate a new firing reason. It's that simple!
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>URL Parameters</h2>
+        <p class="intro-text">
+          Personalize the firing experience by adding URL parameters. Both parameters are optional 
+          and have a maximum length of 10 characters.
+        </p>
+
+        <div class="parameter">
+          <div class="param-header">
+            <code class="param-name">n</code>
+            <span class="param-type">Name Parameter</span>
+          </div>
+          <p class="param-description">
+            Add a name to personalize the message. The name will be converted to uppercase.
+          </p>
+          <div class="example">
+            <strong>Example:</strong>
+            <code class="code-block">https://urfired.lol/?n=John</code>
+            <a href="/?n=John" class="demo-link" target="_blank">Try it →</a>
+          </div>
+        </div>
+
+        <div class="parameter">
+          <div class="param-header">
+            <code class="param-name">c</code>
+            <span class="param-type">Company Parameter</span>
+          </div>
+          <p class="param-description">
+            Add a company name to make it more realistic. The company name will be converted to uppercase.
+          </p>
+          <div class="example">
+            <strong>Example:</strong>
+            <code class="code-block">https://urfired.lol/?c=Google</code>
+            <a href="/?c=Google" class="demo-link" target="_blank">Try it →</a>
+          </div>
+        </div>
+
+        <div class="parameter">
+          <div class="param-header">
+            <code class="param-name">n + c</code>
+            <span class="param-type">Combined Parameters</span>
+          </div>
+          <p class="param-description">
+            Combine both parameters for maximum personalization and hilarity.
+          </p>
+          <div class="example">
+            <strong>Example:</strong>
+            <code class="code-block">https://urfired.lol/?n=Sarah&c=Meta</code>
+            <a href="/?n=Sarah&c=Meta" class="demo-link" target="_blank">Try it →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Use Cases</h2>
+        <ul class="use-cases">
+          <li>📧 Send a personalized firing message to your friends</li>
+          <li>💼 Share during corporate restructuring announcements (too soon?)</li>
+          <li>🎭 Create memes and social media content</li>
+          <li>😂 Lighten the mood during actual layoff season</li>
+          <li>🎉 Generate unique messages for team building (or team breaking)</li>
+        </ul>
+      </section>
+
+      <section class="section technical">
+        <h2>Technical Details</h2>
+        <ul class="tech-list">
+          <li><strong>Built with:</strong> Astro 5.x</li>
+          <li><strong>Deployed on:</strong> Cloudflare Pages</li>
+          <li><strong>Response time:</strong> Blazing fast ⚡</li>
+          <li><strong>Database:</strong> None (stateless, just like your employment)</li>
+          <li><strong>Character limit:</strong> 10 characters per parameter</li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <nav class="nav-links">
+          <a href="/">← Home</a>
+          <span class="separator">•</span>
+          <a href="/pricing">Pricing</a>
+          <span class="separator">•</span>
+          <a href="https://github.com/yorjaggy/urfired.lol" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span class="separator">•</span>
+          <a href="https://ko-fi.com/yorjaggy" target="_blank" rel="noopener noreferrer">☕ Ko-fi</a>
+        </nav>
+      </footer>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .docs-container {
+    min-height: 100vh;
+    background-color: #FF5722;
+    padding: 32px 16px;
+  }
+
+  .docs-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    padding: 48px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  .docs-header {
+    text-align: center;
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 2px solid #FF5722;
+  }
+
+  .docs-header h1 {
+    font-family: var(--font-sans);
+    font-size: 3rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 12px;
+  }
+
+  .subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    color: #666;
+    letter-spacing: 0.02em;
+  }
+
+  .section {
+    margin-bottom: 40px;
+  }
+
+  .section h2 {
+    font-family: var(--font-sans);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 16px;
+  }
+
+  .section p {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 12px;
+  }
+
+  .intro-text {
+    margin-bottom: 24px;
+    font-size: 1.05rem;
+  }
+
+  .parameter {
+    background-color: #f8f9fa;
+    border-left: 4px solid #FF5722;
+    padding: 20px;
+    margin-bottom: 24px;
+    border-radius: 6px;
+  }
+
+  .param-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .param-name {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: #FF5722;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+  }
+
+  .param-type {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .param-description {
+    margin-bottom: 16px;
+    color: #555;
+  }
+
+  .example {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .example strong {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: #666;
+  }
+
+  .code-block {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    background-color: #2d2d2d;
+    color: #50fa7b;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    word-break: break-all;
+  }
+
+  .demo-link {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: #FF5722;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  .demo-link:hover {
+    color: #E64A19;
+    text-decoration: underline;
+  }
+
+  .use-cases {
+    list-style: none;
+    padding: 0;
+  }
+
+  .use-cases li {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .use-cases li:last-child {
+    border-bottom: none;
+  }
+
+  .technical {
+    background-color: #f8f9fa;
+    padding: 24px;
+    border-radius: 8px;
+  }
+
+  .tech-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .tech-list li {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #333;
+    padding: 6px 0;
+  }
+
+  .tech-list strong {
+    color: #FF5722;
+  }
+
+  .docs-footer {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 2px solid #eee;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: #FF5722;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links a:hover {
+    color: #E64A19;
+    text-decoration: underline;
+  }
+
+  .separator {
+    color: #ccc;
+    font-size: 1rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .docs-content {
+      padding: 32px 24px;
+    }
+
+    .docs-header h1 {
+      font-size: 2rem;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+    }
+
+    .code-block {
+      font-size: 0.8rem;
+      word-break: break-all;
+    }
+
+    .example {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .docs-container {
+      padding: 16px 8px;
+    }
+
+    .docs-content {
+      padding: 24px 16px;
+      border-radius: 8px;
+    }
+
+    .param-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+  }
+</style>

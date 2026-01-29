@@ -1,0 +1,676 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Pricing - urfired.lol"
+  description="Choose the perfect plan for your firing needs. From casual terminations to mass layoffs."
+>
+  <div class="pricing-container">
+    <div class="pricing-content">
+      <header class="pricing-header">
+        <h1>Pricing Plans</h1>
+        <p class="subtitle">Choose your termination frequency (it's all free, we're not monsters)</p>
+      </header>
+
+      <div class="pricing-cards">
+        <!-- Basic Plan -->
+        <div class="pricing-card">
+          <div class="card-header">
+            <h3 class="plan-name">Basic</h3>
+            <div class="price">
+              <span class="currency">$</span>
+              <span class="amount">0</span>
+              <span class="period">/month</span>
+            </div>
+            <p class="plan-tagline">For the casually unemployed</p>
+          </div>
+
+          <div class="card-body">
+            <ul class="features">
+              <li>✨ Up to <strong>10 firings</strong> per month</li>
+              <li>🎲 Random firing reasons</li>
+              <li>🔗 Custom URL parameters (n & c)</li>
+              <li>📱 Mobile & desktop support</li>
+              <li>😢 Unlimited tears (not included)</li>
+              <li>📦 Zero severance package</li>
+            </ul>
+          </div>
+
+          <div class="card-footer">
+            <button class="cta-button basic" data-plan="basic">
+              Get Fired (Responsibly)
+            </button>
+            <p class="disclaimer">* for educational purposes only</p>
+          </div>
+        </div>
+
+        <!-- Layoff Plan (Most Popular) -->
+        <div class="pricing-card featured">
+          <div class="badge">HR's Choice</div>
+          <div class="card-header">
+            <h3 class="plan-name">Layoff</h3>
+            <div class="price">
+              <span class="currency">$</span>
+              <span class="amount">99.99</span>
+              <span class="period">/month</span>
+            </div>
+            <p class="plan-tagline">Your severance package at work</p>
+          </div>
+
+          <div class="card-body">
+            <ul class="features">
+              <li>🚀 Up to <strong>16,000 layoffs</strong> per day</li>
+              <li>⚡ Priority firing queue</li>
+              <li>🎯 Personalized termination messages</li>
+              <li>📊 Layoff analytics dashboard*</li>
+              <li>💼 Virtual exit interview</li>
+              <li>🎁 Complimentary "It's not you, it's us" card</li>
+              <li>☕ Coffee machine access (for 2 more weeks)</li>
+              <li>📧 Mass firing email templates</li>
+            </ul>
+          </div>
+
+          <div class="card-footer">
+            <button class="cta-button layoff" data-plan="layoff">
+              Mass Termination Mode
+            </button>
+            <p class="disclaimer">* analytics show only despair</p>
+          </div>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="pricing-card">
+          <div class="card-header">
+            <h3 class="plan-name">Enterprise</h3>
+            <div class="price">
+              <span class="currency">$</span>
+              <span class="amount">???</span>
+              <span class="period">/month</span>
+            </div>
+            <p class="plan-tagline">When layoffs become a lifestyle</p>
+          </div>
+
+          <div class="card-body">
+            <div class="enterprise-message">
+              <p class="big-text">Really? 🤔</p>
+              <p class="message-text">
+                You need <strong>MORE</strong> than 16,000 layoffs per day? 
+              </p>
+              <p class="message-text">
+                Ok, we're not here to judge... but we're totally judging you 👀
+              </p>
+              <p class="message-text final">
+                Let's get in touch and discuss your... <em>unique</em> situation.
+              </p>
+            </div>
+
+            <ul class="features">
+              <li>♾️ <strong>Unlimited</strong> firings (oof)</li>
+              <li>🏢 Dedicated account manager</li>
+              <li>🎭 Custom firing reasons</li>
+              <li>🔐 Private firing portal</li>
+              <li>📞 24/7 termination support</li>
+              <li>🎪 On-site layoff ceremonies</li>
+              <li>🏆 "Employer of the Year" trophy (satirical)</li>
+              <li>💳 Corporate expense account tears</li>
+            </ul>
+          </div>
+
+          <div class="card-footer">
+            <button class="cta-button enterprise" data-plan="enterprise">
+              Let's Talk (About Your Addiction)
+            </button>
+            <p class="disclaimer">** seriously though, take a break</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h4>Is this actually real?</h4>
+          <p>No. This is satire. Everything is free. We're just making fun of corporate layoff culture.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Do I need to pay?</h4>
+          <p>Absolutely not. The only thing you're paying is attention to how absurd layoff season has become.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I actually get 16,000 firings per day?</h4>
+          <p>You can click as many times as you want. We won't stop you. But maybe... consider therapy?</p>
+        </div>
+      </div>
+
+      <footer class="pricing-footer">
+        <nav class="nav-links">
+          <a href="/">← Home</a>
+          <span class="separator">•</span>
+          <a href="/docs">Documentation</a>
+          <span class="separator">•</span>
+          <a href="https://github.com/yorjaggy/urfired.lol" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span class="separator">•</span>
+          <a href="https://ko-fi.com/yorjaggy" target="_blank" rel="noopener noreferrer">☕ Ko-fi</a>
+        </nav>
+      </footer>
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h3 id="modal-title">Surprise!</h3>
+      <p id="modal-message">This is satire. Everything is free. Go fire yourself for free on the homepage! 😄</p>
+      <button class="modal-cta" id="modal-close">Got it!</button>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const modal = document.getElementById('modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalMessage = document.getElementById('modal-message');
+  const closeButton = document.querySelector('.close-button');
+  const modalClose = document.getElementById('modal-close');
+  const ctaButtons = document.querySelectorAll('.cta-button');
+
+  const messages = {
+    basic: {
+      title: "Basic Plan Selected! 🎉",
+      message: "Just kidding! Everything is completely free. Visit the homepage and fire yourself as many times as you want. No limits. No payments. Just vibes."
+    },
+    layoff: {
+      title: "Mass Termination Mode Activated! 🚀",
+      message: "Psych! This is satire. You can use urfired.lol unlimited times for free. Go ahead, fire everyone (virtually, of course)."
+    },
+    enterprise: {
+      title: "Seeking Help... 😅",
+      message: "We're genuinely concerned about your firing addiction. But since this is all fake anyway, go wild on the homepage. It's free forever!"
+    }
+  };
+
+  ctaButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const plan = button.dataset.plan;
+      const msg = messages[plan];
+      modalTitle.textContent = msg.title;
+      modalMessage.textContent = msg.message;
+      modal.classList.add('show');
+    });
+  });
+
+  closeButton.addEventListener('click', () => {
+    modal.classList.remove('show');
+  });
+
+  modalClose.addEventListener('click', () => {
+    modal.classList.remove('show');
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('show');
+    }
+  });
+</script>
+
+<style>
+  .pricing-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FF5722 0%, #E64A19 100%);
+    padding: 48px 16px;
+  }
+
+  .pricing-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .pricing-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .pricing-header h1 {
+    font-family: var(--font-sans);
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .subtitle {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.02em;
+  }
+
+  .pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+
+  .pricing-card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+  }
+
+  .pricing-card.featured {
+    border: 3px solid #FF5722;
+    transform: scale(1.05);
+  }
+
+  .pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-8px);
+  }
+
+  .badge {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: linear-gradient(135deg, #FF5722, #E64A19);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 12px rgba(255, 87, 34, 0.4);
+  }
+
+  .card-header {
+    text-align: center;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid #f0f0f0;
+  }
+
+  .plan-name {
+    font-family: var(--font-sans);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 16px;
+  }
+
+  .price {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  .currency {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #FF5722;
+    margin-right: 4px;
+    margin-top: 8px;
+  }
+
+  .amount {
+    font-family: var(--font-sans);
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #000;
+    line-height: 1;
+  }
+
+  .period {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: #666;
+    align-self: flex-end;
+    margin-left: 4px;
+    margin-bottom: 8px;
+  }
+
+  .plan-tagline {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+  }
+
+  .card-body {
+    flex: 1;
+    margin-bottom: 24px;
+  }
+
+  .enterprise-message {
+    background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+    border-left: 4px solid #FF5722;
+    padding: 20px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+  }
+
+  .big-text {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .message-text {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 8px;
+  }
+
+  .message-text.final {
+    margin-top: 16px;
+    font-weight: 600;
+    color: #FF5722;
+  }
+
+  .features {
+    list-style: none;
+    padding: 0;
+  }
+
+  .features li {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #333;
+    padding: 8px 0;
+    border-bottom: 1px solid #f5f5f5;
+  }
+
+  .features li:last-child {
+    border-bottom: none;
+  }
+
+  .features strong {
+    color: #FF5722;
+    font-weight: 700;
+  }
+
+  .card-footer {
+    text-align: center;
+  }
+
+  .cta-button {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .cta-button.basic {
+    background: linear-gradient(135deg, #757575, #616161);
+    color: white;
+  }
+
+  .cta-button.basic:hover {
+    background: linear-gradient(135deg, #616161, #424242);
+    transform: scale(1.02);
+  }
+
+  .cta-button.layoff {
+    background: linear-gradient(135deg, #FF5722, #E64A19);
+    color: white;
+    box-shadow: 0 4px 16px rgba(255, 87, 34, 0.3);
+  }
+
+  .cta-button.layoff:hover {
+    background: linear-gradient(135deg, #E64A19, #D84315);
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(255, 87, 34, 0.4);
+  }
+
+  .cta-button.enterprise {
+    background: linear-gradient(135deg, #000, #424242);
+    color: white;
+  }
+
+  .cta-button.enterprise:hover {
+    background: linear-gradient(135deg, #424242, #000);
+    transform: scale(1.02);
+  }
+
+  .disclaimer {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: #999;
+    margin-top: 8px;
+    font-style: italic;
+  }
+
+  .faq-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 48px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .faq-section h2 {
+    font-family: var(--font-sans);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .faq-item {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .faq-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .faq-item h4 {
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #FF5722;
+    margin-bottom: 8px;
+  }
+
+  .faq-item p {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .pricing-footer {
+    text-align: center;
+    padding: 32px 0;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links a:hover {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: underline;
+  }
+
+  .separator {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+  }
+
+  .modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+    max-width: 500px;
+    margin: 16px;
+    position: relative;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .close-button {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .close-button:hover {
+    color: #000;
+  }
+
+  .modal-content h3 {
+    font-family: var(--font-sans);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 16px;
+  }
+
+  .modal-content p {
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 24px;
+  }
+
+  .modal-cta {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #FF5722, #E64A19);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+
+  .modal-cta:hover {
+    background: linear-gradient(135deg, #E64A19, #D84315);
+    transform: scale(1.02);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .pricing-header h1 {
+      font-size: 2.5rem;
+    }
+
+    .pricing-cards {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .pricing-card.featured {
+      transform: scale(1);
+    }
+
+    .pricing-card.featured:hover {
+      transform: translateY(-8px);
+    }
+
+    .faq-section {
+      padding: 24px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .pricing-container {
+      padding: 24px 8px;
+    }
+
+    .pricing-card {
+      padding: 24px 20px;
+    }
+
+    .amount {
+      font-size: 2.5rem;
+    }
+
+    .modal-content {
+      padding: 24px;
+    }
+  }
+</style>

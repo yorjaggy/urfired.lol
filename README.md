@@ -34,7 +34,7 @@ You can personalize the experience using URL parameters:
 ```text
 /
 ├── public/
-│   ├── favicon.svg
+│   ├── favicon.lol.png
 │   ├── interactivity.js    # Client-side interactivity
 │   └── messages.js         # Firing reasons collection
 ├── src/

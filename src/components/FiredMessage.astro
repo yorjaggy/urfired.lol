@@ -27,9 +27,23 @@ const initialReason = getRandomReason();
 
   <footer class="footer">
     <p class="footer-message">This site was entirely vibe coded in one hour :D</p>
-    <a href="https://github.com/yorjaggy/urfired.lol" target="_blank" rel="noopener noreferrer">
-      GitHub
-    </a>
+    <nav class="footer-nav">
+      <a href="https://github.com/yorjaggy/urfired.lol" target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+      <span class="separator">•</span>
+      <a href="/docs">
+        Documentation
+      </a>
+      <span class="separator">•</span>
+      <a href="/pricing">
+        Pricing
+      </a>
+      <span class="separator">•</span>
+      <a href="https://ko-fi.com/yorjaggy" target="_blank" rel="noopener noreferrer">
+        ☕ Ko-fi
+      </a>
+    </nav>
   </footer>
 </div>
 
@@ -92,29 +106,46 @@ const initialReason = getRandomReason();
   }
 
   .footer {
-    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
     text-align: center;
-    padding: 16px 0;
-    margin-top: 16px;
+    padding-top: 20px;
   }
 
   .footer-message {
     font-family: var(--font-mono);
     color: rgba(255, 255, 255, 0.6);
     font-size: 0.75rem;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
   }
 
-  .footer a {
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .footer-nav a {
+    font-family: var(--font-mono);
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.875rem;
+    font-size: 1rem;
+    font-weight: 600;
     text-decoration: none;
     transition: color 0.2s ease;
   }
 
-  .footer a:hover {
+  .footer-nav a:hover {
     color: white;
     text-decoration: underline;
+  }
+
+  .separator {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1rem;
   }
 
   /* Animation classes */
